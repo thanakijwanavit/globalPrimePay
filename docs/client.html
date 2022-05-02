@@ -134,7 +134,7 @@ nb_path: "nbs/client.ipynb"
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>{&#39;rememberCard&#39;: True, &#39;resultCode&#39;: &#39;00&#39;, &#39;resultMessage&#39;: &#39;Success&#39;, &#39;card&#39;: {&#39;name&#39;: None, &#39;number&#39;: &#39;453501XXXXXX5741&#39;, &#39;expirationMonth&#39;: &#39;05&#39;, &#39;expirationYear&#39;: &#39;28&#39;, &#39;securityCode&#39;: None, &#39;token&#39;: &#39;74bdc02c-825c-4ab9-afec-fdd946e0151b&#39;, &#39;cardLocation&#39;: &#39;D&#39;, &#39;cardType&#39;: &#39;VIS&#39;}}
+<pre>{&#39;rememberCard&#39;: True, &#39;resultCode&#39;: &#39;00&#39;, &#39;resultMessage&#39;: &#39;Success&#39;, &#39;card&#39;: {&#39;name&#39;: None, &#39;number&#39;: &#39;453501XXXXXX5741&#39;, &#39;expirationMonth&#39;: &#39;05&#39;, &#39;expirationYear&#39;: &#39;28&#39;, &#39;securityCode&#39;: None, &#39;token&#39;: &#39;9513f0e0-aa69-49bc-98b0-afbd82dab52a&#39;, &#39;cardLocation&#39;: &#39;D&#39;, &#39;cardType&#39;: &#39;VIS&#39;}}
 </pre>
 </div>
 </div>
@@ -208,10 +208,12 @@ nb_path: "nbs/client.ipynb"
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">client</span> <span class="o">=</span> <span class="n">Client</span><span class="p">(</span><span class="o">**</span><span class="n">sampleKeys</span><span class="p">)</span>
+<span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="n">randint</span>
+
 <span class="n">cardPayload</span> <span class="o">=</span> <span class="p">{</span>
   <span class="s1">&#39;token&#39;</span><span class="p">:</span> <span class="n">token</span><span class="p">,</span>
   <span class="s1">&#39;amount&#39;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
-  <span class="s1">&#39;referenceNo&#39;</span><span class="p">:</span> <span class="s2">&quot;AC1234&quot;</span><span class="p">,</span>
+  <span class="s1">&#39;referenceNo&#39;</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;TEST123</span><span class="si">{</span><span class="n">randint</span><span class="p">(</span><span class="mi">1000</span><span class="p">,</span><span class="mi">10000</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span>
   <span class="s1">&#39;customerName&#39;</span><span class="p">:</span> <span class="s1">&#39;nic&#39;</span><span class="p">,</span>
   <span class="s1">&#39;customerEmail&#39;</span><span class="p">:</span> <span class="s1">&#39;email@gmail.com&#39;</span><span class="p">,</span>
   <span class="s1">&#39;otp&#39;</span><span class="p">:</span> <span class="s1">&#39;Y&#39;</span><span class="p">,</span>
@@ -232,7 +234,7 @@ nb_path: "nbs/client.ipynb"
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>{&#39;customerAddress&#39;: None, &#39;amount&#39;: 10, &#39;referenceNo&#39;: &#39;AC1234&#39;, &#39;messageToMerchant&#39;: None, &#39;resultCode&#39;: &#39;00&#39;, &#39;customerTelephone&#39;: None, &#39;resultMessage&#39;: &#39;Success&#39;, &#39;customerName&#39;: &#39;nic&#39;, &#39;customerEmail&#39;: &#39;email@gmail.com&#39;, &#39;gbpReferenceNo&#39;: &#39;gbp173512057797&#39;, &#39;merchantDefined5&#39;: None, &#39;detail&#39;: &#39;this is just a test&#39;, &#39;merchantDefined3&#39;: None, &#39;merchantDefined4&#39;: None, &#39;merchantDefined1&#39;: None, &#39;merchantDefined2&#39;: None}
+<pre>{&#39;customerAddress&#39;: None, &#39;amount&#39;: 10, &#39;referenceNo&#39;: &#39;TEST1234975&#39;, &#39;messageToMerchant&#39;: None, &#39;resultCode&#39;: &#39;00&#39;, &#39;customerTelephone&#39;: None, &#39;resultMessage&#39;: &#39;Success&#39;, &#39;customerName&#39;: &#39;nic&#39;, &#39;customerEmail&#39;: &#39;email@gmail.com&#39;, &#39;gbpReferenceNo&#39;: &#39;gbp173512057819&#39;, &#39;merchantDefined5&#39;: None, &#39;detail&#39;: &#39;this is just a test&#39;, &#39;merchantDefined3&#39;: None, &#39;merchantDefined4&#39;: None, &#39;merchantDefined1&#39;: None, &#39;merchantDefined2&#39;: None}
 </pre>
 </div>
 </div>
@@ -285,9 +287,26 @@ nb_path: "nbs/client.ipynb"
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">r</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">verifyOtp</span><span class="p">(</span><span class="n">gbpReferenceNo</span><span class="p">)</span>
+<span class="n">r</span>
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#39;&lt;!DOCTYPE html&gt;\n\n&lt;html&gt;\n  &lt;head&gt;\n    &lt;title&gt;GB Prime Pay&lt;/title&gt;\n    &lt;meta charset=&#34;UTF-8&#34; /&gt;\n    &lt;meta name=&#34;viewport&#34; content=&#34;width=device-width, initial-scale=1.0&#34; /&gt;\n  &lt;/head&gt;\n  &lt;body&gt;\n    &lt;div&gt;Loading...&lt;/div&gt;\n    &lt;div&gt;\n      &lt;form action=&#34;https://simbank.globalprimepay.com/pay/3d_secure&#34; method=&#34;post&#34;&gt;\n        &lt;input type=&#34;hidden&#34; name=&#34;MERID&#34; value=&#34;21291800001&#34; /&gt;\n        &lt;input type=&#34;hidden&#34; name=&#34;TERMINALID&#34; value=&#34;18060001&#34; /&gt;\n        &lt;input type=&#34;hidden&#34; name=&#34;PAN&#34; value=&#34;4535017710535741&#34; /&gt;\n        &lt;input type=&#34;hidden&#34; name=&#34;EXPIRYDATE&#34; value=&#34;0528&#34; /&gt;\n        &lt;input type=&#34;hidden&#34; name=&#34;CVV2&#34; value=&#34;184&#34; /&gt;\n        &lt;input type=&#34;hidden&#34; name=&#34;INVOICENO&#34; value=&#34;2205020023&#34; /&gt;\n        &lt;input type=&#34;hidden&#34; name=&#34;AMOUNT&#34; value=&#34;1000&#34; /&gt;\n        &lt;input type=&#34;hidden&#34; name=&#34;POSTURL&#34; value=&#34;https://api.globalprimepay.com/web/thanachat_gateway/receive/goback&#34; /&gt;\n        &lt;input type=&#34;hidden&#34; name=&#34;POSTURL2&#34; value=&#34;https://api.globalprimepay.com/web/thanachat_gateway/receive/realtime&#34; /&gt;\n        &lt;input type=&#34;hidden&#34; name=&#34;AUTOREDIRECT&#34; value=&#34;Y&#34; /&gt;\n      &lt;/form&gt;\n    &lt;/div&gt;\n    &lt;script type=&#34;text/javascript&#34; src=&#34;https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js&#34;&gt;&lt;/script&gt;\n    &lt;script type=&#34;text/javascript&#34;&gt;\n      $(document).ready(function () {\n        $(\&#39;form\&#39;).submit();\n      });\n    &lt;/script&gt;\n  &lt;/body&gt;\n&lt;/html&gt;&#39;</pre>
+</div>
+
+</div>
+
 </div>
 </div>
 
@@ -301,55 +320,10 @@ nb_path: "nbs/client.ipynb"
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">HTML</span>
-<span class="n">HTML</span><span class="p">(</span><span class="n">r</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># HTML(r)</span>
 </pre></div>
 
     </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-
-<div class="output_html rendered_html output_subarea output_execute_result"><!DOCTYPE html>
-
-<html>
-  <head>
-    <title>GB Prime Pay</title>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  </head>
-  <body>
-    <div>Loading...</div>
-    <div>
-      <form action="https://simbank.globalprimepay.com/pay/3d_secure" method="post">
-        <input type="hidden" name="MERID" value="21291800001" />
-        <input type="hidden" name="TERMINALID" value="18060001" />
-        <input type="hidden" name="PAN" value="4535017710535741" />
-        <input type="hidden" name="EXPIRYDATE" value="0528" />
-        <input type="hidden" name="CVV2" value="184" />
-        <input type="hidden" name="INVOICENO" value="2205020022" />
-        <input type="hidden" name="AMOUNT" value="1000" />
-        <input type="hidden" name="POSTURL" value="https://api.globalprimepay.com/web/thanachat_gateway/receive/goback" />
-        <input type="hidden" name="POSTURL2" value="https://api.globalprimepay.com/web/thanachat_gateway/receive/realtime" />
-        <input type="hidden" name="AUTOREDIRECT" value="Y" />
-      </form>
-    </div>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script type="text/javascript">
-      $(document).ready(function () {
-        $('form').submit();
-      });
-    </script>
-  </body>
-</html></div>
-
-</div>
-
 </div>
 </div>
 

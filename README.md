@@ -1,3 +1,3 @@
-# Index
+# Global Prime Pay SDK
 
 
