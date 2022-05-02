@@ -1,0 +1,9 @@
+version = 0.1
+[default]
+[default.deploy]
+[default.deploy.parameters]
+stack_name = "samNbdev"
+s3_bucket = "aws-sam-cli-managed-default-samclisourcebucket-jx3h3o6mj7ty"
+s3_prefix = "samNbdebTemplate"
+region = "ap-southeast-1"
+capabilities = "CAPABILITY_IAM"
