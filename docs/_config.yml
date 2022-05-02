@@ -1,9 +1,9 @@
-repository: thanakijwanavit/deliveryCost
+repository: thanakijwanavit/globalPrimePay
 output: web
-topnav_title: deliveryCost
-site_title: deliveryCost
+topnav_title: globalPrimePay
+site_title: globalPrimePay
 company_name: tenxor
-description: Calculate your delivery cost
+description: global prime pay sdk
 # Set to false to disable KaTeX math
 use_math: true
 # Add Google analytics id if you have one and want to use it here
