@@ -11,6 +11,6 @@ modules = ["client.py",
 
 doc_url = "https://thanakijwanavit.github.io/globalPrimePay/"
 
-git_url = "https://github.com/thanakijwanavit/globalPrimePay/tree/main/"
+git_url = "https://github.com/thanakijwanavit/globalPrimePay"
 
 def custom_doc_links(name): return None
