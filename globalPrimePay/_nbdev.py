@@ -4,6 +4,8 @@ __all__ = ["index", "modules", "custom_doc_links", "git_url"]
 
 index = {"Client": "client.ipynb",
          "getCardToken": "client.ipynb",
+         "chargeCard": "client.ipynb",
+         "verifyOtp": "client.ipynb",
          "Keys": "helper.ipynb"}
 
 modules = ["client.py",
