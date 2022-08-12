@@ -13,6 +13,9 @@ entries:
       title: Client
       url: client.html
     - output: web,pdf
+      title: Exceptions
+      url: exceptions.html
+    - output: web,pdf
       title: Helper
       url: helper.html
     output: web

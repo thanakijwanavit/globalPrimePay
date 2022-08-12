@@ -6,9 +6,12 @@ index = {"Client": "client.ipynb",
          "getCardToken": "client.ipynb",
          "chargeCard": "client.ipynb",
          "verifyOtp": "client.ipynb",
+         "GBPrimePayException": "exceptions.ipynb",
+         "GBPResponseError": "exceptions.ipynb",
          "Keys": "helper.ipynb"}
 
 modules = ["client.py",
+           "exceptions.py",
            "helper.py"]
 
 doc_url = "https://thanakijwanavit.github.io/globalPrimePay/"

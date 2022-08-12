@@ -2,6 +2,7 @@
   "globalPrimePay": {
     "Overview": "/",
     "Client": "client.html",
+    "Exceptions": "exceptions.html",
     "Helper": "helper.html"
   }
 }

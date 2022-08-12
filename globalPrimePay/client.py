@@ -3,10 +3,13 @@
 __all__ = ['Client', 'getCardToken', 'chargeCard', 'verifyOtp']
 
 # Cell
-from .helper import Keys
 from nicHelper.wrappers import add_method
 from numbers import Number
-import requests
+import requests, sentry_sdk
+
+# Cell
+from .helper import Keys
+from .exceptions import GBPResponseError
 
 # Cell
 
@@ -47,8 +50,12 @@ def getCardToken(self, cardNumber, expirationMonth, expirationYear, securityCode
   }
   baseURL = self.endpoint
   url = f'{baseURL}/v2/tokens'
-  r = requests.post(url,headers = headersCharge, json = body)
-  return r.json()
+  r:requests.Response = requests.post(url,headers = headersCharge, json = body)
+  jsonResponse = r.json()
+  if r.status_code >= 400:
+    sentry_sdk.add_breadcrumb(category = 'gbPrimePay', data = {'input':body, 'response':jsonResponse} , level = 'critical')
+    raise GBPResponseError(f'error response, input payload is {body}, response from gb is {jsonResponse}')
+  return jsonResponse
 
 
 # Cell
@@ -84,7 +91,13 @@ def chargeCard(self, token:str,
     'Content-Type': 'application/json',
   }
   r = requests.post(url, json=body, headers = headers)
-  return r.json()
+  jsonResponse = r.json()
+  # handle error
+  if r.status_code >= 400:
+    sentry_sdk.add_breadcrumb(category = 'gbPrimePay', data = {'input':body, 'response':jsonResponse} , level = 'critical')
+    raise GBPResponseError(f'error response, input payload is {body}, response from gb is {jsonResponse}')
+  return jsonResponse
+
 
 
 # Cell
@@ -99,4 +112,7 @@ def verifyOtp(self, gbpReferenceNo):
   }
   url = self.endpoint + "/v2/tokens/3d_secured"
   r = requests.post(url, params=params, headers = headers3d)
+  if r.status_code >= 400:
+    sentry_sdk.add_breadcrumb(category = 'gbPrimePay', data = {'input':params, 'response':r.text} , level = 'critical')
+    raise GBPResponseError(f'error response, input payload is {params}, response from gb is {r.text}')
   return r.text
