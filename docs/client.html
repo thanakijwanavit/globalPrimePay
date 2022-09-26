@@ -60,7 +60,7 @@ nb_path: "nbs/client.ipynb"
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h2 id="Helper" class="doc_header"><code>class</code> <code>Helper</code><a href="https://github.com/thanakijwanavit/globalPrimePayglobalPrimePay/client.py#L15" class="source_link" style="float:right">[source]</a></h2><blockquote><p><code>Helper</code>()</p>
+<h2 id="Helper" class="doc_header"><code>class</code> <code>Helper</code><a href="https://github.com/thanakijwanavit/globalPrimePayglobalPrimePay/client.py#L16" class="source_link" style="float:right">[source]</a></h2><blockquote><p><code>Helper</code>()</p>
 </blockquote>
 
 </div>
@@ -130,9 +130,14 @@ nb_path: "nbs/client.ipynb"
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h2 id="Client" class="doc_header"><code>class</code> <code>Client</code><a href="https://github.com/thanakijwanavit/globalPrimePayglobalPrimePay/client.py#L24" class="source_link" style="float:right">[source]</a></h2><blockquote><p><code>Client</code>(<strong><code>pub</code></strong>, <strong><code>secret</code></strong>, <strong><code>token</code></strong>=<em><code>''</code></em>, <strong><code>endpoint</code></strong>=<em><code>'https://api.globalprimepay.com'</code></em>) :: <a href="/globalPrimePay/client.html#Helper"><code>Helper</code></a></p>
+<h2 id="Client" class="doc_header"><code>class</code> <code>Client</code><a href="https://github.com/thanakijwanavit/globalPrimePayglobalPrimePay/client.py#L25" class="source_link" style="float:right">[source]</a></h2><blockquote><p><code>Client</code>(<strong><code>pub</code></strong>, <strong><code>secret</code></strong>, <strong><code>token</code></strong>=<em><code>''</code></em>, <strong><code>endpoint</code></strong>=<em><code>'https://api.globalprimepay.com'</code></em>) :: <a href="/globalPrimePay/client.html#Helper"><code>Helper</code></a></p>
 </blockquote>
-<p>main client for interface with global prime pay</p>
+<p>main client for interface with global prime pay
+accept 3 inputs from gbp
+pub: public key
+secret: your secret key
+token: your client token</p>
+<p>please refer to the main readme which should describe what those are</p>
 
 </div>
 
@@ -168,7 +173,7 @@ nb_path: "nbs/client.ipynb"
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="getCardToken" class="doc_header"><code>getCardToken</code><a href="https://github.com/thanakijwanavit/globalPrimePayglobalPrimePay/client.py#L41" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>getCardToken</code>(<strong><code>cardNumber</code></strong>, <strong><code>expirationMonth</code></strong>, <strong><code>expirationYear</code></strong>, <strong><code>securityCode</code></strong>, <strong><code>name</code></strong>, <strong>**<code>kwargs</code></strong>)</p>
+<h4 id="getCardToken" class="doc_header"><code>getCardToken</code><a href="https://github.com/thanakijwanavit/globalPrimePayglobalPrimePay/client.py#L48" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>getCardToken</code>(<strong><code>cardNumber</code></strong>, <strong><code>expirationMonth</code></strong>, <strong><code>expirationYear</code></strong>, <strong><code>securityCode</code></strong>, <strong><code>name</code></strong>, <strong>**<code>kwargs</code></strong>)</p>
 </blockquote>
 
 </div>
@@ -212,7 +217,7 @@ nb_path: "nbs/client.ipynb"
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>{&#39;rememberCard&#39;: True, &#39;resultCode&#39;: &#39;00&#39;, &#39;resultMessage&#39;: &#39;Success&#39;, &#39;card&#39;: {&#39;name&#39;: None, &#39;number&#39;: &#39;453501XXXXXX5741&#39;, &#39;expirationMonth&#39;: &#39;05&#39;, &#39;expirationYear&#39;: &#39;28&#39;, &#39;securityCode&#39;: None, &#39;token&#39;: &#39;41bc08ce-3a02-4444-a98e-a3bd9dfffd71&#39;, &#39;cardLocation&#39;: &#39;I&#39;, &#39;cardType&#39;: &#39;VIS&#39;}, &#39;email&#39;: None, &#39;mobilePhone&#39;: None, &#39;userId&#39;: None}
+<pre>{&#39;rememberCard&#39;: True, &#39;resultCode&#39;: &#39;00&#39;, &#39;resultMessage&#39;: &#39;Success&#39;, &#39;card&#39;: {&#39;name&#39;: None, &#39;number&#39;: &#39;453501XXXXXX5741&#39;, &#39;expirationMonth&#39;: &#39;05&#39;, &#39;expirationYear&#39;: &#39;28&#39;, &#39;securityCode&#39;: None, &#39;token&#39;: &#39;8bf362d7-dbde-45d1-9193-09b73d760882&#39;, &#39;cardLocation&#39;: &#39;I&#39;, &#39;cardType&#39;: &#39;VIS&#39;}, &#39;email&#39;: None, &#39;mobilePhone&#39;: None, &#39;userId&#39;: None}
 </pre>
 </div>
 </div>
@@ -230,7 +235,7 @@ nb_path: "nbs/client.ipynb"
   &#39;expirationMonth&#39;: &#39;05&#39;,
   &#39;expirationYear&#39;: &#39;28&#39;,
   &#39;securityCode&#39;: None,
-  &#39;token&#39;: &#39;41bc08ce-3a02-4444-a98e-a3bd9dfffd71&#39;,
+  &#39;token&#39;: &#39;8bf362d7-dbde-45d1-9193-09b73d760882&#39;,
   &#39;cardLocation&#39;: &#39;I&#39;,
   &#39;cardType&#39;: &#39;VIS&#39;},
  &#39;email&#39;: None,
@@ -263,8 +268,20 @@ nb_path: "nbs/client.ipynb"
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="chargeCard" class="doc_header"><code>chargeCard</code><a href="https://github.com/thanakijwanavit/globalPrimePayglobalPrimePay/client.py#L71" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>chargeCard</code>(<strong><code>token</code></strong>:<code>str</code>, <strong><code>amount</code></strong>:<code>Number</code>, <strong><code>referenceNo</code></strong>:<code>str</code>, <strong><code>customerName</code></strong>:<code>str</code>, <strong><code>customerEmail</code></strong>:<code>str</code>, <strong><code>detail</code></strong>:<code>str</code>, <strong><code>responseUrl</code></strong>:<code>str</code>=<em><code>'https://responseUrl'</code></em>, <strong><code>backgroundUrl</code></strong>:<code>str</code>=<em><code>'https://backgroundUrl'</code></em>, <strong><code>otp</code></strong>:<code>str</code>=<em><code>'Y'</code></em>, <strong>**<code>kwargs</code></strong>)</p>
+<h4 id="chargeCard" class="doc_header"><code>chargeCard</code><a href="https://github.com/thanakijwanavit/globalPrimePayglobalPrimePay/client.py#L78" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>chargeCard</code>(<strong><code>token</code></strong>:<code>str</code>, <strong><code>amount</code></strong>:<code>Number</code>, <strong><code>referenceNo</code></strong>:<code>str</code>, <strong><code>customerName</code></strong>:<code>str</code>, <strong><code>customerEmail</code></strong>:<code>str</code>, <strong><code>detail</code></strong>:<code>str</code>, <strong><code>responseUrl</code></strong>:<code>str</code>=<em><code>'https://responseUrl'</code></em>, <strong><code>backgroundUrl</code></strong>:<code>str</code>=<em><code>'https://backgroundUrl'</code></em>, <strong><code>otp</code></strong>:<code>str</code>=<em><code>'Y'</code></em>, <strong>**<code>kwargs</code></strong>)</p>
 </blockquote>
+<p>charge card using 3d security,
+input:
+  token:str:: card token (generated using client.getCardToken
+  amount:Number:: amount to charge
+  referenceNo:str:: reference used to check payment status later, should be uniquely generated
+  customerName:str
+  customerEmail:str
+  detail:str
+  responseUrl:str:: redirect url
+  backgroundUrl:str:: callback url
+  otp:str:: should we force user to input OTP 'Y' or 'N'
+  **kwargs: any other input, please see full reference here <a href="https://doc.gbprimepay.com/full-payment-3d">https://doc.gbprimepay.com/full-payment-3d</a></p>
 
 </div>
 
@@ -317,7 +334,7 @@ nb_path: "nbs/client.ipynb"
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>{&#39;customerAddress&#39;: None, &#39;amount&#39;: 10, &#39;referenceNo&#39;: &#39;TEST1232415&#39;, &#39;messageToMerchant&#39;: None, &#39;resultCode&#39;: &#39;00&#39;, &#39;customerTelephone&#39;: None, &#39;resultMessage&#39;: &#39;Success&#39;, &#39;customerName&#39;: &#39;nic&#39;, &#39;customerEmail&#39;: &#39;email@gmail.com&#39;, &#39;gbpReferenceNo&#39;: &#39;gbp173512112797&#39;, &#39;merchantDefined5&#39;: None, &#39;detail&#39;: &#39;this is just a test&#39;, &#39;merchantDefined3&#39;: None, &#39;merchantDefined4&#39;: None, &#39;merchantDefined1&#39;: None, &#39;merchantDefined2&#39;: None}
+<pre>{&#39;customerAddress&#39;: None, &#39;amount&#39;: 10, &#39;referenceNo&#39;: &#39;TEST1233954&#39;, &#39;messageToMerchant&#39;: None, &#39;resultCode&#39;: &#39;00&#39;, &#39;customerTelephone&#39;: None, &#39;resultMessage&#39;: &#39;Success&#39;, &#39;customerName&#39;: &#39;nic&#39;, &#39;customerEmail&#39;: &#39;email@gmail.com&#39;, &#39;gbpReferenceNo&#39;: &#39;gbp173512112883&#39;, &#39;merchantDefined5&#39;: None, &#39;detail&#39;: &#39;this is just a test&#39;, &#39;merchantDefined3&#39;: None, &#39;merchantDefined4&#39;: None, &#39;merchantDefined1&#39;: None, &#39;merchantDefined2&#39;: None}
 </pre>
 </div>
 </div>
@@ -345,7 +362,7 @@ nb_path: "nbs/client.ipynb"
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="verifyOtp" class="doc_header"><code>verifyOtp</code><a href="https://github.com/thanakijwanavit/globalPrimePayglobalPrimePay/client.py#L113" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>verifyOtp</code>(<strong><code>gbpReferenceNo</code></strong>)</p>
+<h4 id="verifyOtp" class="doc_header"><code>verifyOtp</code><a href="https://github.com/thanakijwanavit/globalPrimePayglobalPrimePay/client.py#L134" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>verifyOtp</code>(<strong><code>gbpReferenceNo</code></strong>)</p>
 </blockquote>
 
 </div>
@@ -388,7 +405,7 @@ nb_path: "nbs/client.ipynb"
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&#39;&lt;!DOCTYPE html&gt;\n\n&lt;html&gt;\n  &lt;head&gt;\n    &lt;title&gt;GB Prime Pay&lt;/title&gt;\n    &lt;meta charset=&#34;UTF-8&#34; /&gt;\n    &lt;meta name=&#34;viewport&#34; content=&#34;width=device-width, initial-scale=1.0&#34; /&gt;\n  &lt;/head&gt;\n  &lt;body&gt;\n    &lt;div&gt;Loading...&lt;/div&gt;\n    &lt;div&gt;\n      &lt;form action=&#34;https://simbank.globalprimepay.com/pay/3d_secure&#34; method=&#34;post&#34;&gt;\n        &lt;input type=&#34;hidden&#34; name=&#34;MERID&#34; value=&#34;21291800058&#34; /&gt;\n        &lt;input type=&#34;hidden&#34; name=&#34;TERMINALID&#34; value=&#34;18060001&#34; /&gt;\n        &lt;input type=&#34;hidden&#34; name=&#34;PAN&#34; value=&#34;4535017710535741&#34; /&gt;\n        &lt;input type=&#34;hidden&#34; name=&#34;EXPIRYDATE&#34; value=&#34;0528&#34; /&gt;\n        &lt;input type=&#34;hidden&#34; name=&#34;CVV2&#34; value=&#34;184&#34; /&gt;\n        &lt;input type=&#34;hidden&#34; name=&#34;INVOICENO&#34; value=&#34;2209260013&#34; /&gt;\n        &lt;input type=&#34;hidden&#34; name=&#34;AMOUNT&#34; value=&#34;1000&#34; /&gt;\n        &lt;input type=&#34;hidden&#34; name=&#34;POSTURL&#34; value=&#34;https://api.globalprimepay.com/web/thanachat_gateway/receive/goback&#34; /&gt;\n        &lt;input type=&#34;hidden&#34; name=&#34;POSTURL2&#34; value=&#34;https://api.globalprimepay.com/web/thanachat_gateway/receive/realtime&#34; /&gt;\n        &lt;input type=&#34;hidden&#34; name=&#34;AUTOREDIRECT&#34; value=&#34;Y&#34; /&gt;\n      &lt;/form&gt;\n    &lt;/div&gt;\n    &lt;script type=&#34;text/javascript&#34; src=&#34;https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js&#34;&gt;&lt;/script&gt;\n    &lt;script type=&#34;text/javascript&#34;&gt;\n      $(document).ready(function () {\n        $(\&#39;form\&#39;).submit();\n      });\n    &lt;/script&gt;\n  &lt;/body&gt;\n&lt;/html&gt;&#39;</pre>
+<pre>&#39;&lt;!DOCTYPE html&gt;\n\n&lt;html&gt;\n  &lt;head&gt;\n    &lt;title&gt;GB Prime Pay&lt;/title&gt;\n    &lt;meta charset=&#34;UTF-8&#34; /&gt;\n    &lt;meta name=&#34;viewport&#34; content=&#34;width=device-width, initial-scale=1.0&#34; /&gt;\n  &lt;/head&gt;\n  &lt;body&gt;\n    &lt;div&gt;Loading...&lt;/div&gt;\n    &lt;div&gt;\n      &lt;form action=&#34;https://simbank.globalprimepay.com/pay/3d_secure&#34; method=&#34;post&#34;&gt;\n        &lt;input type=&#34;hidden&#34; name=&#34;MERID&#34; value=&#34;21291800058&#34; /&gt;\n        &lt;input type=&#34;hidden&#34; name=&#34;TERMINALID&#34; value=&#34;18060001&#34; /&gt;\n        &lt;input type=&#34;hidden&#34; name=&#34;PAN&#34; value=&#34;4535017710535741&#34; /&gt;\n        &lt;input type=&#34;hidden&#34; name=&#34;EXPIRYDATE&#34; value=&#34;0528&#34; /&gt;\n        &lt;input type=&#34;hidden&#34; name=&#34;CVV2&#34; value=&#34;184&#34; /&gt;\n        &lt;input type=&#34;hidden&#34; name=&#34;INVOICENO&#34; value=&#34;2209260037&#34; /&gt;\n        &lt;input type=&#34;hidden&#34; name=&#34;AMOUNT&#34; value=&#34;1000&#34; /&gt;\n        &lt;input type=&#34;hidden&#34; name=&#34;POSTURL&#34; value=&#34;https://api.globalprimepay.com/web/thanachat_gateway/receive/goback&#34; /&gt;\n        &lt;input type=&#34;hidden&#34; name=&#34;POSTURL2&#34; value=&#34;https://api.globalprimepay.com/web/thanachat_gateway/receive/realtime&#34; /&gt;\n        &lt;input type=&#34;hidden&#34; name=&#34;AUTOREDIRECT&#34; value=&#34;Y&#34; /&gt;\n      &lt;/form&gt;\n    &lt;/div&gt;\n    &lt;script type=&#34;text/javascript&#34; src=&#34;https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js&#34;&gt;&lt;/script&gt;\n    &lt;script type=&#34;text/javascript&#34;&gt;\n      $(document).ready(function () {\n        $(\&#39;form\&#39;).submit();\n      });\n    &lt;/script&gt;\n  &lt;/body&gt;\n&lt;/html&gt;&#39;</pre>
 </div>
 
 </div>
@@ -504,7 +521,7 @@ nb_path: "nbs/client.ipynb"
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="qrPayment" class="doc_header"><code>qrPayment</code><a href="https://github.com/thanakijwanavit/globalPrimePayglobalPrimePay/client.py#L130" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>qrPayment</code>(<strong><code>amount</code></strong>:<code>Number</code>, <strong><code>referenceNo</code></strong>:<code>str</code>, <strong>*<code>args</code></strong>, <strong>**<code>kwargs</code></strong>)</p>
+<h4 id="qrPayment" class="doc_header"><code>qrPayment</code><a href="https://github.com/thanakijwanavit/globalPrimePayglobalPrimePay/client.py#L151" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>qrPayment</code>(<strong><code>amount</code></strong>:<code>Number</code>, <strong><code>referenceNo</code></strong>:<code>str</code>, <strong>*<code>args</code></strong>, <strong>**<code>kwargs</code></strong>)</p>
 </blockquote>
 <p>pass through variable except token is get from the main class, please see docs at
 <a href="https://doc.gbprimepay.com/qrcash">https://doc.gbprimepay.com/qrcash</a>
@@ -527,6 +544,49 @@ currently only amount and referenceNo are required</p>
 </div>
     {% endraw %}
 
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">client</span> <span class="o">=</span> <span class="n">Client</span><span class="p">(</span> <span class="n">pub</span><span class="o">=</span><span class="n">sec</span><span class="p">[</span><span class="s1">&#39;public&#39;</span><span class="p">],</span> <span class="n">secret</span> <span class="o">=</span> <span class="n">sec</span><span class="p">[</span><span class="s1">&#39;secret&#39;</span><span class="p">],</span> <span class="n">token</span> <span class="o">=</span> <span class="n">sec</span><span class="p">[</span><span class="s1">&#39;token&#39;</span><span class="p">],</span><span class="n">endpoint</span> <span class="o">=</span> <span class="s1">&#39;https://api.gbprimepay.com/&#39;</span><span class="p">,</span> <span class="p">)</span>
+<span class="n">customerKey</span> <span class="o">=</span> <span class="n">sec</span><span class="p">[</span><span class="s1">&#39;token&#39;</span><span class="p">]</span>
+<span class="n">ref</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;test</span><span class="si">{</span><span class="n">randint</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span><span class="mi">999</span><span class="p">)</span><span class="si">}</span><span class="s1">&#39;</span>
+
+<span class="n">r</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">qrPayment</span><span class="p">(</span><span class="n">token</span> <span class="o">=</span> <span class="n">customerKey</span><span class="p">,</span> <span class="n">amount</span> <span class="o">=</span> <span class="mf">15.00</span><span class="p">,</span> <span class="n">referenceNo</span><span class="o">=</span><span class="n">ref</span><span class="p">,</span><span class="n">responseUrl</span> <span class="o">=</span> <span class="s2">&quot;https://responseUrl&quot;</span><span class="p">,</span>
+               <span class="n">backgroundUrl</span> <span class="o">=</span>  <span class="s2">&quot;https://backgroundUrl&quot;</span><span class="p">)</span>
+<span class="n">r</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>{&#39;referenceNo&#39;: &#39;test912&#39;,
+ &#39;qrcode&#39;: &#39;00020101021230830016A00000067701011201150105560068127550218000000220926036146031800000000000test9125303764540515.005802TH5910GBPrimePay6304AD1F&#39;,
+ &#39;resultCode&#39;: &#39;00&#39;,
+ &#39;gbpReferenceNo&#39;: &#39;gbp8778174987806&#39;,
+ &#39;resultMessage&#39;: &#39;Success&#39;}</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Check-status">Check status<a class="anchor-link" href="#Check-status"> </a></h2>
@@ -544,7 +604,7 @@ currently only amount and referenceNo are required</p>
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="checkStatus" class="doc_header"><code>checkStatus</code><a href="https://github.com/thanakijwanavit/globalPrimePayglobalPrimePay/client.py#L152" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>checkStatus</code>(<strong><code>referenceNo</code></strong>, <strong>**<code>kwargs</code></strong>)</p>
+<h4 id="checkStatus" class="doc_header"><code>checkStatus</code><a href="https://github.com/thanakijwanavit/globalPrimePayglobalPrimePay/client.py#L173" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>checkStatus</code>(<strong><code>referenceNo</code></strong>, <strong>**<code>kwargs</code></strong>)</p>
 </blockquote>
 
 </div>
@@ -575,7 +635,7 @@ currently only amount and referenceNo are required</p>
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="paymentStatus" class="doc_header"><code>paymentStatus</code><a href="https://github.com/thanakijwanavit/globalPrimePayglobalPrimePay/client.py#L165" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>paymentStatus</code>(<strong><code>referenceNo</code></strong>, <strong>**<code>kwargs</code></strong>)</p>
+<h4 id="paymentStatus" class="doc_header"><code>paymentStatus</code><a href="https://github.com/thanakijwanavit/globalPrimePayglobalPrimePay/client.py#L186" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>paymentStatus</code>(<strong><code>referenceNo</code></strong>, <strong>**<code>kwargs</code></strong>)</p>
 </blockquote>
 
 </div>
@@ -619,8 +679,8 @@ currently only amount and referenceNo are required</p>
 <div class="output_text output_subarea output_execute_result">
 <pre>{&#39;resultCode&#39;: &#39;00&#39;,
  &#39;txn&#39;: {&#39;amount&#39;: &#39;15.00&#39;,
-  &#39;referenceNo&#39;: &#39;test820&#39;,
-  &#39;gbpReferenceNo&#39;: &#39;gbp8778174968128&#39;,
+  &#39;referenceNo&#39;: &#39;test912&#39;,
+  &#39;gbpReferenceNo&#39;: &#39;gbp8778174987806&#39;,
   &#39;merchantDefined5&#39;: None,
   &#39;merchantDefined3&#39;: None,
   &#39;merchantDefined4&#39;: None,

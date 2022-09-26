@@ -5,6 +5,7 @@ __all__ = ['Helper', 'Client', 'getCardToken', 'chargeCard', 'verifyOtp', 'qrPay
 # Cell
 from nicHelper.wrappers import add_method
 from numbers import Number
+from typing import Optional
 import requests, sentry_sdk, urllib
 
 # Cell
@@ -24,6 +25,12 @@ class Helper:
 class Client(Helper):
   '''
     main client for interface with global prime pay
+    accept 3 inputs from gbp
+    pub: public key
+    secret: your secret key
+    token: your client token
+
+    please refer to the main readme which should describe what those are
   '''
   def __init__(self, pub, secret, token='', endpoint = 'https://api.globalprimepay.com'):
     '''
@@ -79,6 +86,20 @@ def chargeCard(self, token:str,
                backgroundUrl:str =  "https://backgroundUrl",
                otp:str = "Y",
                **kwargs)->dict:
+  '''
+    charge card using 3d security,
+    input:
+      token:str:: card token (generated using client.getCardToken
+      amount:Number:: amount to charge
+      referenceNo:str:: reference used to check payment status later, should be uniquely generated
+      customerName:str
+      customerEmail:str
+      detail:str
+      responseUrl:str:: redirect url
+      backgroundUrl:str:: callback url
+      otp:str:: should we force user to input OTP 'Y' or 'N'
+      **kwargs: any other input, please see full reference here https://doc.gbprimepay.com/full-payment-3d
+  '''
   body = {
     "amount": amount,
     "referenceNo": referenceNo,
@@ -141,7 +162,7 @@ def qrPayment(self, amount:Number, referenceNo:str, *args, **kwargs):
   body = {
     'token': self.token,
     'amount': amount,
-    'referenceNo': referenceNo
+    'referenceNo': referenceNo,
     **kwargs
   }
   r = requests.post(url, data = self.urlEncode(body), headers = headers)
