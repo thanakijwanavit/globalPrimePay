@@ -128,13 +128,20 @@ def verifyOtp(self, gbpReferenceNo):
 
 # Cell
 @add_method(Client)
-def qrPayment(self, *args, **kwargs):
+def qrPayment(self, amount:Number, referenceNo:str, *args, **kwargs):
+  '''
+    pass through variable except token is get from the main class, please see docs at
+    https://doc.gbprimepay.com/qrcash
+    currently only amount and referenceNo are required
+  '''
   url = f'{self.endpoint}/v3/qrcode/text'
   headers = {
     'Content-Type': 'application/x-www-form-urlencoded',
   }
   body = {
     'token': self.token,
+    'amount': amount,
+    'referenceNo': referenceNo
     **kwargs
   }
   r = requests.post(url, data = self.urlEncode(body), headers = headers)
