@@ -43,6 +43,22 @@ for python docs see <a href="https://thanakijwanavit.github.io/globalPrimePay/">
 </div>
 </div>
 </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Secrets">Secrets<a class="anchor-link" href="#Secrets"> </a></h2><p>GB prime should give you a password file which should include</p>
+<blockquote><p>this should also be available at your gbprime console in <code>profile&gt;show Key</code> near the bottom of the page</p>
+</blockquote>
+
+<pre><code>public:Public Keysecret: Secret Key
+token: Token / Customer Key</code></pre>
+<p>These key should be saved securely and should never be shared with the client or stored in the source code
+We recommend a secret storage service such as <code>aws secrets manager</code>
+if you are developing your app please use the test domain key</p>
+<p>these secrets must be used when initiating the gbp client</p>
+
+</div>
+</div>
+</div>
 </div>
  
 
