@@ -2,7 +2,7 @@ topnav:
 - title: Topnav
   items:
     - title: github
-      external_url: https://github.com/thanakijwanavit/deliveryCost/tree/main/
+      external_url: https://github.com/thanakijwanavit/globalPrimePay
 
 #Topnav dropdowns
 topnav_dropdowns:
