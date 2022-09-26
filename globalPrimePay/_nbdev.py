@@ -2,10 +2,14 @@
 
 __all__ = ["index", "modules", "custom_doc_links", "git_url"]
 
-index = {"Client": "client.ipynb",
+index = {"Helper": "client.ipynb",
+         "Client": "client.ipynb",
          "getCardToken": "client.ipynb",
          "chargeCard": "client.ipynb",
          "verifyOtp": "client.ipynb",
+         "qrPayment": "client.ipynb",
+         "checkStatus": "client.ipynb",
+         "paymentStatus": "client.ipynb",
          "GBPrimePayException": "exceptions.ipynb",
          "GBPResponseError": "exceptions.ipynb",
          "Keys": "helper.ipynb"}
