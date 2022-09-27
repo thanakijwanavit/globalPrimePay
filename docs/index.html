@@ -35,8 +35,8 @@ nb_path: "index.ipynb"
 for python docs see <a href="https://thanakijwanavit.github.io/globalPrimePay/">https://thanakijwanavit.github.io/globalPrimePay/</a></p>
 <h2 id="Install">Install<a class="anchor-link" href="#Install"> </a></h2><p><code>pip install globalPrimePay</code></p>
 <h2 id="How-to-use">How to use<a class="anchor-link" href="#How-to-use"> </a></h2><ol>
-<li>Get appropriate secret and public key</li>
-<li>go through get started</li>
+<li>Get gbprime secrets</li>
+<li><code>pip install globalPrimePay</code></li>
 <li>python docs <a href="https://thanakijwanavit.github.io/globalPrimePay/">here</a></li>
 </ol>
 
@@ -59,6 +59,239 @@ if you are developing your app please use the test domain key</p>
 </div>
 </div>
 </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Usage">Usage<a class="anchor-link" href="#Usage"> </a></h1><h2 id="Initiate-a-client">Initiate a client<a class="anchor-link" href="#Initiate-a-client"> </a></h2>
+</div>
+</div>
+</div>
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">globalPrimePay.client</span> <span class="kn">import</span> <span class="n">Client</span>
+<span class="n">client</span> <span class="o">=</span> <span class="n">Client</span><span class="p">(</span><span class="n">pub</span> <span class="o">=</span> <span class="s1">&#39;PUBLICKEY&#39;</span><span class="p">,</span> <span class="n">secret</span><span class="o">=</span><span class="s1">&#39;SECRETKEY&#39;</span><span class="p">,</span> <span class="n">token</span><span class="o">=</span><span class="s1">&#39;CLIENT TOKEN&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Pay-with-credit-card">Pay with credit card<a class="anchor-link" href="#Pay-with-credit-card"> </a></h2>
+</div>
+</div>
+</div>
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">sampleCard</span> <span class="o">=</span> <span class="p">{</span>
+      <span class="s2">&quot;cardNumber&quot;</span><span class="p">:</span> <span class="s2">&quot;4535017710535741&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;expirationMonth&quot;</span><span class="p">:</span> <span class="s2">&quot;05&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;expirationYear&quot;</span><span class="p">:</span> <span class="s2">&quot;28&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;securityCode&quot;</span><span class="p">:</span> <span class="s2">&quot;184&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Watcharagon Phokonwong&quot;</span>
+    <span class="p">}</span>
+<span class="n">cardToken</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">getCardToken</span><span class="p">(</span><span class="o">**</span><span class="n">sampleCard</span><span class="p">)[</span><span class="s1">&#39;card&#39;</span><span class="p">][</span><span class="s1">&#39;token&#39;</span><span class="p">]</span>
+<span class="n">cardToken</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#39;a76e0bc4-a5ed-4cf1-a6ca-33d185bc7509&#39;</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="non-3d-payment">non-3d payment<a class="anchor-link" href="#non-3d-payment"> </a></h3>
+</div>
+</div>
+</div>
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">client</span><span class="o">.</span><span class="n">chargeCard</span><span class="p">(</span>
+  <span class="n">token</span> <span class="o">=</span> <span class="n">cardToken</span><span class="p">,</span>
+  <span class="n">amount</span> <span class="o">=</span> <span class="mi">100</span><span class="p">,</span>
+  <span class="n">referenceNo</span> <span class="o">=</span> <span class="s1">&#39;ref1&#39;</span><span class="p">,</span>
+  <span class="n">customerName</span> <span class="o">=</span> <span class="s2">&quot;nic&quot;</span><span class="p">,</span>
+  <span class="n">customerEmail</span> <span class="o">=</span> <span class="s2">&quot;nicsemail@gmail.com&quot;</span><span class="p">,</span>
+  <span class="n">detail</span> <span class="o">=</span>  <span class="s1">&#39;test order&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>{&#39;customerAddress&#39;: None,
+ &#39;amount&#39;: 100,
+ &#39;referenceNo&#39;: &#39;ref1&#39;,
+ &#39;messageToMerchant&#39;: None,
+ &#39;resultCode&#39;: &#39;00&#39;,
+ &#39;customerTelephone&#39;: None,
+ &#39;resultMessage&#39;: &#39;Success&#39;,
+ &#39;customerName&#39;: &#39;nic&#39;,
+ &#39;customerEmail&#39;: &#39;nicsemail@gmail.com&#39;,
+ &#39;gbpReferenceNo&#39;: &#39;gbp173512113574&#39;,
+ &#39;merchantDefined5&#39;: None,
+ &#39;detail&#39;: &#39;test order&#39;,
+ &#39;merchantDefined3&#39;: None,
+ &#39;merchantDefined4&#39;: None,
+ &#39;merchantDefined1&#39;: None,
+ &#39;merchantDefined2&#39;: None}</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="3d-payment">3d payment<a class="anchor-link" href="#3d-payment"> </a></h3>
+</div>
+</div>
+</div>
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">chargeCardResult</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">chargeCard</span><span class="p">(</span>
+  <span class="n">token</span> <span class="o">=</span> <span class="n">cardToken</span><span class="p">,</span>
+  <span class="n">amount</span> <span class="o">=</span> <span class="mi">100</span><span class="p">,</span>
+  <span class="n">referenceNo</span> <span class="o">=</span> <span class="s1">&#39;ref1&#39;</span><span class="p">,</span>
+  <span class="n">customerName</span> <span class="o">=</span> <span class="s2">&quot;nic&quot;</span><span class="p">,</span>
+  <span class="n">customerEmail</span> <span class="o">=</span> <span class="s2">&quot;nicsemail@gmail.com&quot;</span><span class="p">,</span>
+  <span class="n">detail</span> <span class="o">=</span>  <span class="s1">&#39;test order&#39;</span><span class="p">,</span>
+  <span class="n">otp</span> <span class="o">=</span> <span class="s1">&#39;Y&#39;</span>
+<span class="p">)</span>
+<span class="n">chargeCardResult</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>{&#39;customerAddress&#39;: None,
+ &#39;amount&#39;: 100,
+ &#39;referenceNo&#39;: &#39;ref1&#39;,
+ &#39;messageToMerchant&#39;: None,
+ &#39;resultCode&#39;: &#39;00&#39;,
+ &#39;customerTelephone&#39;: None,
+ &#39;resultMessage&#39;: &#39;Success&#39;,
+ &#39;customerName&#39;: &#39;nic&#39;,
+ &#39;customerEmail&#39;: &#39;nicsemail@gmail.com&#39;,
+ &#39;gbpReferenceNo&#39;: &#39;gbp173512113578&#39;,
+ &#39;merchantDefined5&#39;: None,
+ &#39;detail&#39;: &#39;test order&#39;,
+ &#39;merchantDefined3&#39;: None,
+ &#39;merchantDefined4&#39;: None,
+ &#39;merchantDefined1&#39;: None,
+ &#39;merchantDefined2&#39;: None}</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Verify-OTP">Verify OTP<a class="anchor-link" href="#Verify-OTP"> </a></h3>
+</div>
+</div>
+</div>
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">client</span><span class="o">.</span><span class="n">verifyOtp</span><span class="p">(</span><span class="n">chargeCardResult</span><span class="p">[</span><span class="s1">&#39;gbpReferenceNo&#39;</span><span class="p">])</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#39;&lt;!DOCTYPE html&gt;\n\n&lt;html&gt;\n  &lt;head&gt;\n    &lt;title&gt;GB Prime Pay&lt;/title&gt;\n    &lt;meta charset=&#34;UTF-8&#34; /&gt;\n    &lt;meta name=&#34;viewport&#34; content=&#34;width=device-width, initial-scale=1.0&#34; /&gt;\n  &lt;/head&gt;\n  &lt;body&gt;\n    &lt;div&gt;Loading...&lt;/div&gt;\n    &lt;div&gt;\n      &lt;form action=&#34;https://simbank.globalprimepay.com/pay/3d_secure&#34; method=&#34;post&#34;&gt;\n        &lt;input type=&#34;hidden&#34; name=&#34;MERID&#34; value=&#34;21291800058&#34; /&gt;\n        &lt;input type=&#34;hidden&#34; name=&#34;TERMINALID&#34; value=&#34;18060001&#34; /&gt;\n        &lt;input type=&#34;hidden&#34; name=&#34;PAN&#34; value=&#34;4535017710535741&#34; /&gt;\n        &lt;input type=&#34;hidden&#34; name=&#34;EXPIRYDATE&#34; value=&#34;0528&#34; /&gt;\n        &lt;input type=&#34;hidden&#34; name=&#34;CVV2&#34; value=&#34;184&#34; /&gt;\n        &lt;input type=&#34;hidden&#34; name=&#34;INVOICENO&#34; value=&#34;2209270148&#34; /&gt;\n        &lt;input type=&#34;hidden&#34; name=&#34;AMOUNT&#34; value=&#34;10000&#34; /&gt;\n        &lt;input type=&#34;hidden&#34; name=&#34;POSTURL&#34; value=&#34;https://api.globalprimepay.com/web/thanachat_gateway/receive/goback&#34; /&gt;\n        &lt;input type=&#34;hidden&#34; name=&#34;POSTURL2&#34; value=&#34;https://api.globalprimepay.com/web/thanachat_gateway/receive/realtime&#34; /&gt;\n        &lt;input type=&#34;hidden&#34; name=&#34;AUTOREDIRECT&#34; value=&#34;Y&#34; /&gt;\n      &lt;/form&gt;\n    &lt;/div&gt;\n    &lt;script type=&#34;text/javascript&#34; src=&#34;https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js&#34;&gt;&lt;/script&gt;\n    &lt;script type=&#34;text/javascript&#34;&gt;\n      $(document).ready(function () {\n        $(\&#39;form\&#39;).submit();\n      });\n    &lt;/script&gt;\n  &lt;/body&gt;\n&lt;/html&gt;&#39;</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
 </div>
  
 
