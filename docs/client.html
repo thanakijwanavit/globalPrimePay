@@ -226,7 +226,7 @@ token: your client token</p>
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>{&#39;rememberCard&#39;: True, &#39;resultCode&#39;: &#39;00&#39;, &#39;resultMessage&#39;: &#39;Success&#39;, &#39;card&#39;: {&#39;name&#39;: None, &#39;number&#39;: &#39;453501XXXXXX5741&#39;, &#39;expirationMonth&#39;: &#39;05&#39;, &#39;expirationYear&#39;: &#39;28&#39;, &#39;securityCode&#39;: None, &#39;token&#39;: &#39;adaa55d8-6aaa-4895-8212-ca986d2b350d&#39;, &#39;cardLocation&#39;: &#39;I&#39;, &#39;cardType&#39;: &#39;VIS&#39;}, &#39;email&#39;: None, &#39;mobilePhone&#39;: None, &#39;userId&#39;: None, &#39;partnerKey&#39;: None}
+<pre>{&#39;rememberCard&#39;: True, &#39;resultCode&#39;: &#39;00&#39;, &#39;resultMessage&#39;: &#39;Success&#39;, &#39;card&#39;: {&#39;name&#39;: None, &#39;number&#39;: &#39;453501XXXXXX5741&#39;, &#39;expirationMonth&#39;: &#39;05&#39;, &#39;expirationYear&#39;: &#39;28&#39;, &#39;securityCode&#39;: None, &#39;token&#39;: &#39;5e41d517-8bac-4be5-a6d0-bbb06001cab1&#39;, &#39;cardLocation&#39;: &#39;I&#39;, &#39;cardType&#39;: &#39;VIS&#39;}, &#39;email&#39;: None, &#39;mobilePhone&#39;: None, &#39;userId&#39;: None, &#39;partnerKey&#39;: None}
 </pre>
 </div>
 </div>
@@ -244,7 +244,7 @@ token: your client token</p>
   &#39;expirationMonth&#39;: &#39;05&#39;,
   &#39;expirationYear&#39;: &#39;28&#39;,
   &#39;securityCode&#39;: None,
-  &#39;token&#39;: &#39;adaa55d8-6aaa-4895-8212-ca986d2b350d&#39;,
+  &#39;token&#39;: &#39;5e41d517-8bac-4be5-a6d0-bbb06001cab1&#39;,
   &#39;cardLocation&#39;: &#39;I&#39;,
   &#39;cardType&#39;: &#39;VIS&#39;},
  &#39;email&#39;: None,
@@ -347,7 +347,7 @@ input:
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>{&#39;customerAddress&#39;: None, &#39;amount&#39;: 10, &#39;referenceNo&#39;: &#39;TEST1231685&#39;, &#39;messageToMerchant&#39;: None, &#39;resultCode&#39;: &#39;00&#39;, &#39;customerTelephone&#39;: None, &#39;resultMessage&#39;: &#39;Success&#39;, &#39;customerName&#39;: &#39;nic&#39;, &#39;customerEmail&#39;: &#39;email@gmail.com&#39;, &#39;gbpReferenceNo&#39;: &#39;gbp173512137809&#39;, &#39;merchantDefined5&#39;: None, &#39;detail&#39;: &#39;this is just a test&#39;, &#39;merchantDefined3&#39;: None, &#39;merchantDefined4&#39;: None, &#39;merchantDefined1&#39;: None, &#39;merchantDefined2&#39;: None}
+<pre>{&#39;customerAddress&#39;: None, &#39;amount&#39;: 10, &#39;referenceNo&#39;: &#39;TEST1232301&#39;, &#39;messageToMerchant&#39;: None, &#39;resultCode&#39;: &#39;00&#39;, &#39;customerTelephone&#39;: None, &#39;resultMessage&#39;: &#39;Success&#39;, &#39;customerName&#39;: &#39;nic&#39;, &#39;customerEmail&#39;: &#39;email@gmail.com&#39;, &#39;gbpReferenceNo&#39;: &#39;gbp173512137823&#39;, &#39;merchantDefined5&#39;: None, &#39;detail&#39;: &#39;this is just a test&#39;, &#39;merchantDefined3&#39;: None, &#39;merchantDefined4&#39;: None, &#39;merchantDefined1&#39;: None, &#39;merchantDefined2&#39;: None}
 </pre>
 </div>
 </div>
@@ -421,7 +421,7 @@ input:
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&#39;&lt;!DOCTYPE html&gt;\n\n&lt;html&gt;\n  &lt;head&gt;\n    &lt;title&gt;GB Prime Pay&lt;/title&gt;\n    &lt;meta charset=&#34;UTF-8&#34; /&gt;\n    &lt;meta name=&#34;viewport&#34; content=&#34;width=device-width, initial-scale=1.0&#34; /&gt;\n  &lt;/head&gt;\n  &lt;body&gt;\n    &lt;div&gt;Loading...&lt;/div&gt;\n    &lt;div&gt;\n      &lt;form action=&#34;https://simbank.globalprimepay.com/pay/3d_secure&#34; method=&#34;post&#34;&gt;\n        &lt;input type=&#34;hidden&#34; name=&#34;MERID&#34; value=&#34;21291800058&#34; /&gt;\n        &lt;input type=&#34;hidden&#34; name=&#34;TERMINALID&#34; value=&#34;18060001&#34; /&gt;\n        &lt;input type=&#34;hidden&#34; name=&#34;PAN&#34; value=&#34;4535017710535741&#34; /&gt;\n        &lt;input type=&#34;hidden&#34; name=&#34;EXPIRYDATE&#34; value=&#34;0528&#34; /&gt;\n        &lt;input type=&#34;hidden&#34; name=&#34;CVV2&#34; value=&#34;184&#34; /&gt;\n        &lt;input type=&#34;hidden&#34; name=&#34;INVOICENO&#34; value=&#34;2211210051&#34; /&gt;\n        &lt;input type=&#34;hidden&#34; name=&#34;AMOUNT&#34; value=&#34;1000&#34; /&gt;\n        &lt;input type=&#34;hidden&#34; name=&#34;POSTURL&#34; value=&#34;https://api.globalprimepay.com/web/thanachat_gateway/receive/goback&#34; /&gt;\n        &lt;input type=&#34;hidden&#34; name=&#34;POSTURL2&#34; value=&#34;https://api.globalprimepay.com/web/thanachat_gateway/receive/realtime&#34; /&gt;\n        &lt;input type=&#34;hidden&#34; name=&#34;AUTOREDIRECT&#34; value=&#34;Y&#34; /&gt;\n      &lt;/form&gt;\n    &lt;/div&gt;\n    &lt;script type=&#34;text/javascript&#34; src=&#34;https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js&#34;&gt;&lt;/script&gt;\n    &lt;script type=&#34;text/javascript&#34;&gt;\n      $(document).ready(function () {\n        $(\&#39;form\&#39;).submit();\n      });\n    &lt;/script&gt;\n  &lt;/body&gt;\n&lt;/html&gt;&#39;</pre>
+<pre>&#39;&lt;!DOCTYPE html&gt;\n\n&lt;html&gt;\n  &lt;head&gt;\n    &lt;title&gt;GB Prime Pay&lt;/title&gt;\n    &lt;meta charset=&#34;UTF-8&#34; /&gt;\n    &lt;meta name=&#34;viewport&#34; content=&#34;width=device-width, initial-scale=1.0&#34; /&gt;\n  &lt;/head&gt;\n  &lt;body&gt;\n    &lt;div&gt;Loading...&lt;/div&gt;\n    &lt;div&gt;\n      &lt;form action=&#34;https://simbank.globalprimepay.com/pay/3d_secure&#34; method=&#34;post&#34;&gt;\n        &lt;input type=&#34;hidden&#34; name=&#34;MERID&#34; value=&#34;21291800058&#34; /&gt;\n        &lt;input type=&#34;hidden&#34; name=&#34;TERMINALID&#34; value=&#34;18060001&#34; /&gt;\n        &lt;input type=&#34;hidden&#34; name=&#34;PAN&#34; value=&#34;4535017710535741&#34; /&gt;\n        &lt;input type=&#34;hidden&#34; name=&#34;EXPIRYDATE&#34; value=&#34;0528&#34; /&gt;\n        &lt;input type=&#34;hidden&#34; name=&#34;CVV2&#34; value=&#34;184&#34; /&gt;\n        &lt;input type=&#34;hidden&#34; name=&#34;INVOICENO&#34; value=&#34;2211210057&#34; /&gt;\n        &lt;input type=&#34;hidden&#34; name=&#34;AMOUNT&#34; value=&#34;1000&#34; /&gt;\n        &lt;input type=&#34;hidden&#34; name=&#34;POSTURL&#34; value=&#34;https://api.globalprimepay.com/web/thanachat_gateway/receive/goback&#34; /&gt;\n        &lt;input type=&#34;hidden&#34; name=&#34;POSTURL2&#34; value=&#34;https://api.globalprimepay.com/web/thanachat_gateway/receive/realtime&#34; /&gt;\n        &lt;input type=&#34;hidden&#34; name=&#34;AUTOREDIRECT&#34; value=&#34;Y&#34; /&gt;\n      &lt;/form&gt;\n    &lt;/div&gt;\n    &lt;script type=&#34;text/javascript&#34; src=&#34;https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js&#34;&gt;&lt;/script&gt;\n    &lt;script type=&#34;text/javascript&#34;&gt;\n      $(document).ready(function () {\n        $(\&#39;form\&#39;).submit();\n      });\n    &lt;/script&gt;\n  &lt;/body&gt;\n&lt;/html&gt;&#39;</pre>
 </div>
 
 </div>
@@ -591,10 +591,10 @@ currently only amount and referenceNo are required</p>
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>{&#39;referenceNo&#39;: &#39;test522&#39;,
- &#39;qrcode&#39;: &#39;00020101021230830016A00000067701011201150105560068127480218000000221121039125031800000000000test5225303764540515.005802TH5910GBPrimePay6304D681&#39;,
+<pre>{&#39;referenceNo&#39;: &#39;test445&#39;,
+ &#39;qrcode&#39;: &#39;00020101021230830016A00000067701011201150105560068127480218000000221121041055031800000000000test4455303764540515.005802TH5910GBPrimePay6304746D&#39;,
  &#39;resultCode&#39;: &#39;00&#39;,
- &#39;gbpReferenceNo&#39;: &#39;gbp8778184907375&#39;,
+ &#39;gbpReferenceNo&#39;: &#39;gbp8778184909986&#39;,
  &#39;resultMessage&#39;: &#39;Success&#39;}</pre>
 </div>
 
@@ -658,7 +658,35 @@ currently only amount and referenceNo are required</p>
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="paymentStatus" class="doc_header"><code>paymentStatus</code><a href="https://github.com/thanakijwanavit/globalPrimePayglobalPrimePay/client.py#L187" class="source_link" style="float:right">[source]</a></h4>
+<h2 id="PaymentStatusError" class="doc_header"><code>class</code> <code>PaymentStatusError</code><a href="https://github.com/thanakijwanavit/globalPrimePayglobalPrimePay/client.py#L187" class="source_link" style="float:right">[source]</a></h2>
+<blockquote>
+<p><code>PaymentStatusError</code>() :: <code>Exception</code></p>
+</blockquote>
+<p>Common base class for all non-exit exceptions.</p>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_markdown rendered_html output_subarea ">
+<h4 id="paymentStatus" class="doc_header"><code>paymentStatus</code><a href="https://github.com/thanakijwanavit/globalPrimePayglobalPrimePay/client.py#L189" class="source_link" style="float:right">[source]</a></h4>
 <blockquote>
 <p><code>paymentStatus</code>(<strong><code>self</code></strong>, <strong><code>referenceNo</code></strong>, ****<code>kwargs</code>**)</p>
 </blockquote>
@@ -704,8 +732,8 @@ currently only amount and referenceNo are required</p>
 <div class="output_text output_subarea output_execute_result">
 <pre>{&#39;resultCode&#39;: &#39;00&#39;,
  &#39;txn&#39;: {&#39;amount&#39;: &#39;15.00&#39;,
-  &#39;referenceNo&#39;: &#39;test522&#39;,
-  &#39;gbpReferenceNo&#39;: &#39;gbp8778184907375&#39;,
+  &#39;referenceNo&#39;: &#39;test445&#39;,
+  &#39;gbpReferenceNo&#39;: &#39;gbp8778184909986&#39;,
   &#39;merchantDefined5&#39;: None,
   &#39;merchantDefined3&#39;: None,
   &#39;merchantDefined4&#39;: None,
@@ -767,7 +795,7 @@ currently only amount and referenceNo are required</p>
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="wechat-payment">wechat payment<a class="anchor-link" href="#wechat-payment"> </a></h1>
+<h2 id="wechatpay">wechatpay<a class="anchor-link" href="#wechatpay"> </a></h2>
 </div>
 </div>
 </div>
@@ -783,7 +811,7 @@ currently only amount and referenceNo are required</p>
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="wechatPay" class="doc_header"><code>wechatPay</code><a href="https://github.com/thanakijwanavit/globalPrimePayglobalPrimePay/client.py#L194" class="source_link" style="float:right">[source]</a></h4>
+<h4 id="wechatPay" class="doc_header"><code>wechatPay</code><a href="https://github.com/thanakijwanavit/globalPrimePayglobalPrimePay/client.py#L201" class="source_link" style="float:right">[source]</a></h4>
 <blockquote>
 <p><code>wechatPay</code>(<strong><code>self</code></strong>, <strong><code>amount</code></strong>:<code>Number</code>, <strong><code>referenceNo</code></strong>:<code>str</code>, ***<code>args</code><strong>, </strong>**<code>kwargs</code>**)</p>
 </blockquote>
@@ -841,10 +869,10 @@ currently only amount and referenceNo are required</p>
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>{&#39;referenceNo&#39;: &#39;test134&#39;,
+<pre>{&#39;referenceNo&#39;: &#39;test546&#39;,
  &#39;resultCode&#39;: &#39;00&#39;,
- &#39;gbpReferenceNo&#39;: &#39;gbp8778184907379&#39;,
- &#39;wechat&#39;: &#39;weixin://wxpay/bizpayurl?pr=eqr4cvAzz&#39;,
+ &#39;gbpReferenceNo&#39;: &#39;gbp8778184909992&#39;,
+ &#39;wechat&#39;: &#39;weixin://wxpay/bizpayurl?pr=kHETOrdzz&#39;,
  &#39;resultMessage&#39;: &#39;Success&#39;}</pre>
 </div>
 
@@ -874,7 +902,7 @@ currently only amount and referenceNo are required</p>
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="alipay" class="doc_header"><code>alipay</code><a href="https://github.com/thanakijwanavit/globalPrimePayglobalPrimePay/client.py#L216" class="source_link" style="float:right">[source]</a></h4>
+<h4 id="alipay" class="doc_header"><code>alipay</code><a href="https://github.com/thanakijwanavit/globalPrimePayglobalPrimePay/client.py#L223" class="source_link" style="float:right">[source]</a></h4>
 <blockquote>
 <p><code>alipay</code>(<strong><code>self</code></strong>, <strong><code>amount</code></strong>:<code>Number</code>, <strong><code>referenceNo</code></strong>:<code>str</code>, ***<code>args</code><strong>, </strong>**<code>kwargs</code>**)</p>
 </blockquote>
@@ -933,7 +961,7 @@ currently only amount and referenceNo are required</p>
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&#39;&lt;!DOCTYPE html&gt;\n\n&lt;html&gt;\n&lt;head&gt;\n    &lt;title&gt;GB Prime Pay&lt;/title&gt;\n    &lt;meta charset=&#34;UTF-8&#34; /&gt;\n    &lt;meta name=&#34;viewport&#34; content=&#34;width=device-width, initial-scale=1.0&#34; /&gt;\n&lt;/head&gt;\n&lt;body&gt;\n&lt;div&gt;Loading...&lt;/div&gt;\n&lt;div&gt;\n    &lt;form action=&#34;https://paygate.ktc.co.th/ktc/eng/merchandize/payment/payForm.jsp&#34; method=&#34;post&#34;&gt;\n        &lt;input type=&#34;hidden&#34; name=&#34;merchantId&#34; value=&#34;991304584&#34; /&gt;\n        &lt;input type=&#34;hidden&#34; name=&#34;amount&#34; value=&#34;15.00&#34; /&gt;\n        &lt;input type=&#34;hidden&#34; name=&#34;orderRef&#34; value=&#34;221121017184&#34; /&gt;\n        &lt;input type=&#34;hidden&#34; name=&#34;currCode&#34; value=&#34;764&#34; /&gt;\n        &lt;input type=&#34;hidden&#34; name=&#34;successUrl&#34; value=&#34;https://api.gbprimepay.com/alipay/ktc_gateway/success&#34; /&gt;\n        &lt;input type=&#34;hidden&#34; name=&#34;failUrl&#34; value=&#34;https://api.gbprimepay.com/alipay/ktc_gateway/fail&#34; /&gt;\n        &lt;input type=&#34;hidden&#34; name=&#34;cancelUrl&#34; value=&#34;https://api.gbprimepay.com/alipay/ktc_gateway/cancel&#34; /&gt;\n        &lt;input type=&#34;hidden&#34; name=&#34;payType&#34; value=&#34;N&#34; /&gt;\n        &lt;input type=&#34;hidden&#34; name=&#34;lang&#34; value=&#34;E&#34; /&gt;\n        &lt;input type=&#34;hidden&#34; name=&#34;pMethod&#34; value=&#34;ALIPAY&#34; /&gt;\n        &lt;input type=&#34;hidden&#34; name=&#34;TxType&#34; value=&#34;Retail&#34; /&gt;\n\n    &lt;/form&gt;\n&lt;/div&gt;\n&lt;script type=&#34;text/javascript&#34; src=&#34;https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js&#34;&gt;&lt;/script&gt;\n&lt;script type=&#34;text/javascript&#34;&gt;\n      $(document).ready(function () {\n        $(\&#39;form\&#39;).submit();\n      });\n    &lt;/script&gt;\n&lt;/body&gt;\n&lt;/html&gt;&#39;</pre>
+<pre>&#39;&lt;!DOCTYPE html&gt;\n\n&lt;html&gt;\n&lt;head&gt;\n    &lt;title&gt;GB Prime Pay&lt;/title&gt;\n    &lt;meta charset=&#34;UTF-8&#34; /&gt;\n    &lt;meta name=&#34;viewport&#34; content=&#34;width=device-width, initial-scale=1.0&#34; /&gt;\n&lt;/head&gt;\n&lt;body&gt;\n&lt;div&gt;Loading...&lt;/div&gt;\n&lt;div&gt;\n    &lt;form action=&#34;https://paygate.ktc.co.th/ktc/eng/merchandize/payment/payForm.jsp&#34; method=&#34;post&#34;&gt;\n        &lt;input type=&#34;hidden&#34; name=&#34;merchantId&#34; value=&#34;991304584&#34; /&gt;\n        &lt;input type=&#34;hidden&#34; name=&#34;amount&#34; value=&#34;15.00&#34; /&gt;\n        &lt;input type=&#34;hidden&#34; name=&#34;orderRef&#34; value=&#34;221121017380&#34; /&gt;\n        &lt;input type=&#34;hidden&#34; name=&#34;currCode&#34; value=&#34;764&#34; /&gt;\n        &lt;input type=&#34;hidden&#34; name=&#34;successUrl&#34; value=&#34;https://api.gbprimepay.com/alipay/ktc_gateway/success&#34; /&gt;\n        &lt;input type=&#34;hidden&#34; name=&#34;failUrl&#34; value=&#34;https://api.gbprimepay.com/alipay/ktc_gateway/fail&#34; /&gt;\n        &lt;input type=&#34;hidden&#34; name=&#34;cancelUrl&#34; value=&#34;https://api.gbprimepay.com/alipay/ktc_gateway/cancel&#34; /&gt;\n        &lt;input type=&#34;hidden&#34; name=&#34;payType&#34; value=&#34;N&#34; /&gt;\n        &lt;input type=&#34;hidden&#34; name=&#34;lang&#34; value=&#34;E&#34; /&gt;\n        &lt;input type=&#34;hidden&#34; name=&#34;pMethod&#34; value=&#34;ALIPAY&#34; /&gt;\n        &lt;input type=&#34;hidden&#34; name=&#34;TxType&#34; value=&#34;Retail&#34; /&gt;\n\n    &lt;/form&gt;\n&lt;/div&gt;\n&lt;script type=&#34;text/javascript&#34; src=&#34;https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js&#34;&gt;&lt;/script&gt;\n&lt;script type=&#34;text/javascript&#34;&gt;\n      $(document).ready(function () {\n        $(\&#39;form\&#39;).submit();\n      });\n    &lt;/script&gt;\n&lt;/body&gt;\n&lt;/html&gt;&#39;</pre>
 </div>
 
 </div>
