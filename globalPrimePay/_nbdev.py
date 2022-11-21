@@ -10,9 +10,12 @@ index = {"Helper": "client.ipynb",
          "qrPayment": "client.ipynb",
          "checkStatus": "client.ipynb",
          "paymentStatus": "client.ipynb",
+         "wechatPay": "client.ipynb",
+         "alipay": "client.ipynb",
          "GBPrimePayException": "exceptions.ipynb",
          "GBPResponseError": "exceptions.ipynb",
-         "Keys": "helper.ipynb"}
+         "Keys": "helper.ipynb",
+         "checkSum": "helper.ipynb"}
 
 modules = ["client.py",
            "exceptions.py",

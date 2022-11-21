@@ -37,14 +37,14 @@ these secrets must be used when initiating the gbp client
 # Usage
 ## Initiate a client 
 
-```python
+```
 from globalPrimePay.client import Client
 client = Client(pub = 'PUBLICKEY', secret='SECRETKEY', token='CLIENT TOKEN')
 ```
 
 ## Pay with credit card
 
-```python
+```
 sampleCard = {
       "cardNumber": "4535017710535741",
       "expirationMonth": "05",
@@ -65,7 +65,7 @@ cardToken
 
 ### non-3d payment
 
-```python
+```
 # non-3d payment
 client.chargeCard(
   token = cardToken,
@@ -100,7 +100,7 @@ client.chargeCard(
 
 ### 3d payment
 
-```python
+```
 # payment
 chargeCardResult = client.chargeCard(
   token = cardToken,
@@ -138,7 +138,7 @@ chargeCardResult
 
 ### Verify OTP
 
-```python
+```
 client.verifyOtp(chargeCardResult['gbpReferenceNo'])
 ```
 
